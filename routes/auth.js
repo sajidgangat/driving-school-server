@@ -8,7 +8,7 @@ var authRoute = function (expressApp) {
     var authController = new AuthController();
 
     router.post('/login',isAuthenticated, authController.login.bind(authController));
-    // router.post('/signup', authController.signup.bind(authController));
+    router.post('/signup', authController.signup.bind(authController));
 
     router.use(authController.handleServerError.bind(authController));
 
