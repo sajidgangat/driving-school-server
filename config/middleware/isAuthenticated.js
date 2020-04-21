@@ -6,5 +6,12 @@ module.exports = function(req, res, next) {
   }
 
   // If the user isnt' logged in, redirect them to the login page
-  return res.redirect("/");
+  const payload = {
+    status : 401,
+    message: "Not logged in",
+    data: []
+  }
+  
+  res.status(401);
+  res.send(payload)
 };

@@ -1,15 +1,13 @@
 //include controllers
 var BaseController = require('./baseController');
 
-var Q = require('q');
-
 class AuthController extends BaseController {
     constructor() {
         super();
     }
 
-    list(req, res) {
-
+    login(req, res) {
+        this.send(res, 200, "ok", []);
     }
 }
 

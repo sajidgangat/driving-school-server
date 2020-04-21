@@ -41,5 +41,5 @@ db.sequelize.sync().then(function () {
         console.log("==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.", PORT, PORT);
     });
 }).catch(e => {
-    console.log("Error! in connection with database");
+    console.log(e);
 });
